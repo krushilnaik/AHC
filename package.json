@@ -8,6 +8,7 @@
 	"license": "ISC",
 	"scripts": {
 		"start": "parcel src/index.html --https -p 8080 --cert C:/Users/krush/localhost.pem --key C:/Users/krush/localhost-key.pem --no-source-maps",
+		"server": "nodemon ./server/server",
 		"build": "rimraf dist && parcel build src/index.html --no-source-maps",
 		"format": "prettier --write \"{,!(node_modules)/**/}*.(ts|tsx|js|jsx|json|jsonc|css|scss|html)\""
 	},
@@ -24,6 +25,10 @@
 		]
 	},
 	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongodb": "^4.0.1",
+		"mongoose": "^5.13.5",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2"
 	},
@@ -31,6 +36,8 @@
 		"@parcel/transformer-sass": "2.0.0-beta.2",
 		"@types/react": "^17.0.15",
 		"@types/react-dom": "^17.0.9",
+		"dotenv": "^10.0.0",
+		"nodemon": "^2.0.12",
 		"parcel": "^2.0.0-beta.2",
 		"prettier": "^2.3.2",
 		"rimraf": "^3.0.2"

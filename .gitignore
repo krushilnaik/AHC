@@ -14,7 +14,12 @@ node_modules/
 ehthumbs.db
 Thumbs.db
 
+# environment variables
+.env
+.env.*
+
 # config files
 .prettierignore
 .prettierrc
 tsconfig.json
+jsconfig.json
