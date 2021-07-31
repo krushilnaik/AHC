@@ -1,0 +1,38 @@
+{
+	"name": "ahc",
+	"version": "2.0.0",
+	"description": "",
+	"main": "dist/index.html",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"scripts": {
+		"start": "parcel src/index.html --https -p 8080 --cert C:/Users/krush/localhost.pem --key C:/Users/krush/localhost-key.pem --no-source-maps",
+		"build": "rimraf dist && parcel build src/index.html --no-source-maps",
+		"format": "prettier --write \"{,!(node_modules)/**/}*.(ts|tsx|js|jsx|json|jsonc|css|scss|html)\""
+	},
+	"browserslist": {
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		],
+		"production": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "2.0.0-beta.2",
+		"@types/react": "^17.0.15",
+		"@types/react-dom": "^17.0.9",
+		"parcel": "^2.0.0-beta.2",
+		"prettier": "^2.3.2",
+		"rimraf": "^3.0.2"
+	}
+}
