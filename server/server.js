@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const morgan = require('morgan');
 
 const fs = require('fs');
 const path = require('path');
@@ -16,6 +17,7 @@ console.log(`NODE_ENV=${NODE_ENV}\nPORT=${PORT}`);
 let app = express();
 
 // set up middleware
+app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use(cors());
