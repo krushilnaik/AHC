@@ -1,0 +1,48 @@
+@use 'sass:math';
+
+$yin-yang-dim: 175px;
+$duration: 1.5s;
+
+.preloader {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	justify-self: center;
+	width: $yin-yang-dim;
+	height: $yin-yang-dim;
+	border-radius: 50%;
+	background: linear-gradient(black 50%, white 0);
+	animation: rotate $duration linear infinite;
+
+	&:before,
+	&:after {
+		flex: 1;
+		border: solid math.div($yin-yang-dim, 6) white;
+		height: math.div($yin-yang-dim, 6);
+		border-radius: 50%;
+		transform-origin: 0 50%;
+		transform: scale(0.5);
+		background: black;
+		animation: scale $duration ease-in-out infinite alternate;
+		content: '';
+	}
+
+	&:after {
+		border-color: black;
+		transform-origin: 100% 50%;
+		background: white;
+		animation-delay: -$duration;
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes scale {
+	to {
+		transform: scale(1.5);
+	}
+}
