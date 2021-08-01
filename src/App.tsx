@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 import './scss/App.scss';
@@ -12,7 +13,7 @@ function App({}: Props): ReactElement {
 
 			<main>Main</main>
 
-			<footer>Acupuncture Herb Center © 2021</footer>
+			<Footer />
 		</>
 	);
 }
